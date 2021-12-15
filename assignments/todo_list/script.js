@@ -1,20 +1,20 @@
-const submit_button = document.querySelector('button');
-const todo_input = document.querySelector('input');
-const todo_list = document.querySelector('div.todos');
+function createtodo(){
+    var tag = document.createElement("p");
+    tag.setAttribute("key",index)
+    index+=1
+    tag.addEventListener("click",function(){
+        this.remove()
+    })
+    var newtodo = document.getElementsByTagName('input')[0].value
+    var text = document.createTextNode(newtodo)
+    
+    var element = document.getElementsByClassName("todos")[0]
+    tag.appendChild(text)
+    element.appendChild(tag)
 
-submit_button.addEventListener('click',addTodo);
-todo_list.addEventListener('click',removeTodo);
-console.log(todo_list);
-var val = 0
-function addTodo() {
-    const para = document.createElement('p');
-    para.innerText=todo_input.value;
-    para.setAttribute('key',val);
-    val = val+1
-    todo_list.append(para);
-    todo_input.value="";
 }
-function removeTodo(e) {
-    const item=e.target
-    item.remove()
-}
+
+
+var index=0
+var form=document.getElementsByTagName("button")[0]
+form.addEventListener('click',createtodo)
