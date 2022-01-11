@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Todo List</title>
+        <link rel="stylesheet" href="style.css" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Raleway:wght@100&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+            <input type='text' name='todo_input'>
+            <button type='submit'>Add Todo</button>
+            <div class='todos'></div>
+        <div class="todos">
+            <form>
+                <input type="radio" id="all" name="todoradio" value="all" checked onchange="funcname()">
+                <label for="all">all</label>
+                <input type="radio" id="done" name="todoradio" value="completed"  onchange="funcname()">
+                <label for="completed">completed</label>
+                <input type="radio" id="undone" name="todoradio" value="incomplete"  onchange="funcname()">
+                <label for="incomplete">incomplete</label>
+            </form>
+            <div >
+                <ul class="todo_render">
+
+                </ul>
+            </div>
+
+        </div>
+    </body>
+    <script src='./script.js'></script>
+</html>
