@@ -1,0 +1,10 @@
+li{
+    list-style: none;
+    height: 30px;
+    border-radius: 2px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Readex Pro', sans-serif;
+    margin: 5px;
+    text-align: center;
+}
