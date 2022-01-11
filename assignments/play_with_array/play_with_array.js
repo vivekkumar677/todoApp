@@ -1,3 +1,5 @@
+const {map, filter} = require("quixote/vendor/async-1.4.2")
+
 function getEven(arr) {
     /* 
         Return an array containing only even numbers as a result
@@ -7,13 +9,11 @@ function getEven(arr) {
 
         Write you code below
     */
-   const temp = [];
-   for(var i=0; i<=arr.length(); i++){
-       if(arr[i]%2==0){
-           temp.push(arr)
-       }
-       return temp
+   function isdivis(num){
+       return num%2==0
    }
+   var result = arr.filter(isdivis)
+   return result
 
 }
 
@@ -25,11 +25,8 @@ function multiplyByN(arr, n) {
             Output: [3,9,13,165]
         Write you code below
     */
-    const temp = []
-    for(var i=0; i<arr.length; i++){
-        temp.push(arr[i]*n)
-    }
-    return temp
+    arr.forEach((element, i, a) => a[i] = element*n)
+    return arr
 }
 
 function removeNthElement(arr, n) {
@@ -40,9 +37,15 @@ function removeNthElement(arr, n) {
             Output: [1,3,4,7]
         Write you code below
     */
-   arr.pop(n)
-   return arr;
-   
+   let a =[]
+   let i = 0
+   for(x of arr){
+       if(i!=n){
+           a.push(x)
+       }
+       i++
+   }
+   return a
 }
 
 module.exports = {
